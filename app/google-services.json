@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1021369658801",
+    "project_id": "photolist-5e2bb",
+    "storage_bucket": "photolist-5e2bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021369658801:android:b9df4e5115faf5cd32a190",
+        "android_client_info": {
+          "package_name": "com.example.photolist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021369658801-aqfgjvokl4k99uk3n2jp9jmkuoi8aulc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYoDtp1U4OCp2rB3DFLZOO6KOS7LwwgyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021369658801-aqfgjvokl4k99uk3n2jp9jmkuoi8aulc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
