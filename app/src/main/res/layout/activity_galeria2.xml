@@ -6,18 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".GaleriaActivity">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="196dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+    <ImageView
+        android:id="@+id/imgFromStorage"
+        android:layout_width="237dp"
+        android:layout_height="239dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/recyclerView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+    <TextView
+        android:id="@+id/tImgUploaded"
+        android:layout_width="176dp"
+        android:layout_height="31dp"
+        android:text="Imagem Recebida"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.192" />
 </androidx.constraintlayout.widget.ConstraintLayout>

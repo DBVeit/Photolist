@@ -27,6 +27,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,6 +43,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button bGaleria;
     String currentPhotoPath;
     StorageReference storageReference;
+    private ImageView imgFromStorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +53,7 @@ public class MenuActivity extends AppCompatActivity {
         displayImg = findViewById(R.id.displayImg);
         bCamera = findViewById(R.id.bCamera);
         bGaleria = findViewById(R.id.bGaleria);
-
+        imgFromStorage = findViewById(R.id.imgFromStorage);
         storageReference = FirebaseStorage.getInstance().getReference();
 
         bCamera.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +67,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MenuActivity.this,GaleriaActivity.class));
+                //Picasso.get().load(uri).into(imgFromStorage);
             }
         });
 
@@ -128,6 +131,9 @@ public class MenuActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Uri uri) {
                         Log.d("tag", "onSuccess: Uploaded image path: " + uri.toString());
+                        Picasso.get().load(uri).into(displayImg);
+                        //startActivity(new Intent(MenuActivity.this,GaleriaActivity.class));
+                        //Picasso.get().load(uri).into(imgFromStorage);
                     }
                 });
                 Toast.makeText(MenuActivity.this, "Upload de imagem realizado!", Toast.LENGTH_SHORT).show();
